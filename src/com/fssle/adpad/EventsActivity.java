@@ -1,9 +1,11 @@
 package com.fssle.adpad;
-
-import android.app.Activity;
+                                      
 import android.os.Bundle;
 
-public class EventsActivity extends Activity
+import greendroid.app.GDListActivity;
+import greendroid.widget.ItemAdapter; 
+
+public class EventsActivity extends GDListActivity
 {
     /** Called when the activity is first created. */
     @Override
@@ -11,5 +13,13 @@ public class EventsActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.main);
+
+        ItemAdapter adapter;
+        try {
+            adapter = ItemAdapter.createFromXml(this, R.xml.events_items);
+            setListAdapter(adapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

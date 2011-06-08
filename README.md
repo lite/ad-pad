@@ -47,7 +47,7 @@ News
 * Advertisement 
 * Event news feed	
 
-Map
+Map Screen
 ----
 
 * Advertisement

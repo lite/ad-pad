@@ -2,13 +2,13 @@
 <resources>
     <string name="app_name">AdPad</string> 
     
-    <string name="news_label">General information</string>
-    <string name="map_label">Basic items</string>
-    <string name="events_label">XML items</string>
-    <string name="schedule_label">Tweaked itemviews</string>
-    <string name="riders_label">SegmentedBar</string>
-    <string name="partners_label">ActionBarActivity</string>
-    <string name="share_label">QuickAction</string>
-    <string name="social_label">Simple AsyncImageView</string>
+    <string name="news_label">News</string>
+    <string name="map_label">Map Screen</string>
+    <string name="events_label">Events</string>
+    <string name="schedule_label">Schedule</string>
+    <string name="riders_label">Riders</string>
+    <string name="partners_label">Partners</string>
+    <string name="share_label">Photos/videos</string>
+    <string name="social_label">Social</string>
     
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:greendroid="http://schemas.android.com/apk/res/com.fssle.adpad"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:padding="8dp">                                              
+	
+	<greendroid.widget.AsyncImageView
+		android:id="@+id/async_image"
+		android:layout_width="@dimen/thumbnail_size"
+		android:layout_height="@dimen/thumbnail_size"
+		greendroid:defaultSrc="@drawable/icon" />
+
+	<TextView
+		android:id="@+id/text"
+		android:layout_width="0dp"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:paddingLeft="10dp"
+		android:gravity="center_vertical|left" />
+
+</LinearLayout>

@@ -12,9 +12,9 @@ public class AdBannerActivity extends Activity
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.main);
 
-		AdView adView = new AdView(this, AdSize.BANNER, "a14deccf77dab80"); 
-		adView .setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-		LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
-		layout.addView(adView); 
+		// AdView adView = new AdView(this, AdSize.BANNER, "a14deccf77dab80"); 
+		// adView .setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+		// LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
+		// layout.addView(adView); 
     }
 }

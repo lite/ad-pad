@@ -10,10 +10,4 @@ public class AdPadApplication extends GDApplication {
     public Class<?> getHomeActivityClass() {
         return AdPadActivity.class;
     }
-    
-    @Override
-    public Intent getMainApplicationIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.app_url)));
-    } 
-
 }
