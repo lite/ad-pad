@@ -1,0 +1,4 @@
+<resources>
+	<style name="Theme.AdPad" parent="@style/Theme.GreenDroid.NoTitleBar">
+	</style>
+</resources> 
