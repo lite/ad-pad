@@ -14,8 +14,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>  
-        
-        <activity android:name=".AdBannerActivity" />
+                                                      
         <activity android:name=".NewsActivity" />
 		    <activity android:name=".MapActivity" />
         <activity android:name=".EventsActivity" />
@@ -23,10 +22,11 @@
         <activity android:name=".RidersActivity" />
 		    <activity android:name=".PartnersActivity" />
         <activity android:name=".ShareActivity" />
-        <activity android:name=".SocialActivity" /> 
+        <activity android:name=".SocialActivity" />   
+        <activity android:name=".OnlineActivity" />
         
-        <uses-library android:name="com.google.android.maps" />
         <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <uses-library android:name="com.google.android.maps" />
         
     </application> 
     

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+       
+    <com.fssle.adpad.DashboardLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+ 
+        <Button android:id="@+id/dashboard_button_news"
+            style="@style/dashboard_button"
+            android:text="@string/news_label"
+            android:drawableTop="@drawable/dashboard_button" />
+ 
+        <Button android:id="@+id/dashboard_button_map"
+            style="@style/dashboard_button"
+            android:text="@string/map_label"
+            android:drawableTop="@drawable/dashboard_button" />
+ 
+        <Button android:id="@+id/dashboard_button_events"
+            style="@style/dashboard_button"
+            android:text="@string/events_label"
+            android:drawableTop="@drawable/dashboard_button" />
+        
+        <Button android:id="@+id/dashboard_button_schedule"
+            style="@style/dashboard_button"
+            android:text="@string/schedule_label"
+            android:drawableTop="@drawable/dashboard_button" />    
+ 
+        <Button android:id="@+id/dashboard_button_riders"
+             style="@style/dashboard_button"
+             android:text="@string/riders_label"
+             android:drawableTop="@drawable/dashboard_button" />    
+
+        <Button android:id="@+id/dashboard_button_partners"
+           style="@style/dashboard_button"
+           android:text="@string/partners_label"
+           android:drawableTop="@drawable/dashboard_button" />    
+
+        <Button android:id="@+id/dashboard_button_share"
+            style="@style/dashboard_button"
+            android:text="@string/share_label"
+            android:drawableTop="@drawable/dashboard_button" />    
+
+        <Button android:id="@+id/dashboard_button_social"
+            style="@style/dashboard_button"
+            android:text="@string/social_label"
+            android:drawableTop="@drawable/dashboard_button" />    
+
+    </com.fssle.adpad.DashboardLayout>
+</LinearLayout>

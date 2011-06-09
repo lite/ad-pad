@@ -19,8 +19,10 @@ public class NewsActivity extends GDListActivity
         try {
             adapter = ItemAdapter.createFromXml(this, R.xml.news_items);
             setListAdapter(adapter);
+			AdvertisingAdapter ad = new AdvertisingAdapter(this, adapter);
         } catch (Exception e) {
             e.printStackTrace();
-        } 
+        }
+		
     }
 }

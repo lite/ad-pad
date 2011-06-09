@@ -10,5 +10,15 @@
     <string name="partners_label">Partners</string>
     <string name="share_label">Photos/videos</string>
     <string name="social_label">Social</string>
+
+    <string name="share_label">Share</string>
+    <string name="uploads_label">Uploads</string>
+                                                                   
+    <string name="feed_label">Feed</string>
+    <string name="facebook_label">Facebook</string>
+    <string name="twitter_label">Twitter</string>
+    <string name="youtube_label">Youtube</string>
+    <string name="foursquare_label">Foursquare</string>
+    
     
 </resources>

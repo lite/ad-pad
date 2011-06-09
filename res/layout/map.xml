@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout android:id="@+id/widget37"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+<!-- ADs -->
+<include layout="@layout/ad_layout" />
+
+<LinearLayout android:id="@+id/widget39"
+  android:layout_width="317px"
+  android:layout_height="244px"
+  android:orientation="vertical">  
+      <MapView
+        android:id="@+id/widget46"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:apiKey="none"
+      />   
+  </LinearLayout>
+
+<!-- ADs -->
+<include layout="@layout/ad_layout" />
+
+  <ScrollView
+    android:id="@+id/widget41"
+    android:layout_width="320px"
+    android:layout_height="65px"
     >
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/web_view"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="@android:color/white" />
+      <ListView
+        android:id="@+id/widget47"
+        android:layout_width="318px"
+        android:layout_height="63px"
+        />
+    </ScrollView>
+
+<!-- ADs -->
+<include layout="@layout/ad_layout" />
+
 </LinearLayout>

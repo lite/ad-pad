@@ -11,7 +11,8 @@ android create project --package com.fssle.adpad \
 build  
 ====
 
-android update project -t "Google Inc.:Google APIs:4" --path `pwd`
+android update project -t "Google Inc.:Google APIs:4" --path `pwd` 
+ant clean
 ant install  
 
 emulator
@@ -29,6 +30,7 @@ ad-p-ad
     
 ui
 ====
+Hierarchyviewer
                   
 Catagories
 ----
@@ -39,7 +41,8 @@ Catagories
 * Schedule	
 * Riders	
 * Partners	
-* Photos/videos	Social feed
+* Photos/videos	
+* Social feed
 
 News
 ----
