@@ -8,7 +8,8 @@ import android.view.View.OnClickListener;
                            
 import greendroid.app.GDActivity;
 import greendroid.widget.ActionBar;
-import greendroid.widget.ActionBarItem.Type; 
+import greendroid.widget.ActionBarItem.Type;           
+import greendroid.widget.ActionBar.OnActionBarListener; 
 // import greendroid.widget.ItemAdapter;         
 // import greendroid.widget.item.TextItem; 
 
@@ -20,7 +21,10 @@ public class AdPadActivity extends GDActivity
     {
         super.onCreate(savedInstanceState);
                                                   
-		setActionBarContentView(R.layout.dashboard);
+		setActionBarContentView(R.layout.dashboard); 
+		getActionBar().addItem(Type.Settings);        
+		getActionBar().setTitle(getString(R.string.app_name));
+		getActionBar().setOnActionBarListener(mActionBarListener);    
 
 	    //attach event handler to dash buttons
 	    DashboardClickListener dBClickListener = new DashboardClickListener();
@@ -50,7 +54,20 @@ public class AdPadActivity extends GDActivity
     //     final TextItem textItem = (TextItem) l.getAdapter().getItem(position);
     //     Intent intent = new Intent(AdPadActivity.this, (Class<?>) textItem.getTag());
     //     startActivity(intent);
-    // } 
+    // }
+	private OnActionBarListener mActionBarListener = new OnActionBarListener() {
+    	public void onActionBarItemClicked(int position) {
+	 		Intent i = null;   
+			switch(position) {
+			case 0:
+				i = new Intent(AdPadActivity.this, SettingsActivity.class);  
+				startActivity(i);
+				break;
+		    default:
+				break;
+			}          
+	    }      
+    }; 
 
 	private class DashboardClickListener implements OnClickListener {
 	    @Override
@@ -61,7 +78,7 @@ public class AdPadActivity extends GDActivity
 	                i = new Intent(AdPadActivity.this, NewsActivity.class);
 	                break;
 	            case R.id.dashboard_button_map:
-	                i = new Intent(AdPadActivity.this, MapActivity.class);
+	                i = new Intent(AdPadActivity.this, MapScreenActivity.class);
 	                break;
 	            case R.id.dashboard_button_events:
 	                i = new Intent(AdPadActivity.this, EventsActivity.class);

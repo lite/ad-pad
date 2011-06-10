@@ -3,7 +3,7 @@
     xmlns:greendroid="http://schemas.android.com/apk/res/com.fssle.adpad">
     <thumbnail-item
         greendroid:enabled="false"
-        greendroid:text="ThumbnailItem (disabled)"
+        greendroid:text="Ads here"
         greendroid:subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus consequat leo, et tincidunt justo tristique in."
         greendroid:thumbnail="@drawable/icon_ad" />
 

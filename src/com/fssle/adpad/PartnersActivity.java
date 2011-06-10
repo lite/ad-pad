@@ -13,5 +13,13 @@ public class PartnersActivity extends GDListActivity
     {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.main);
+
+        ItemAdapter adapter;
+        try {
+            adapter = ItemAdapter.createFromXml(this, R.xml.partners_items);
+            setListAdapter(adapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

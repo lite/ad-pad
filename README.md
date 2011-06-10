@@ -28,6 +28,21 @@ adb logcat -c
 adb logcat -v time * 
 ad-p-ad
     
+key
+==== 
+keytool -delete -alias androiddebugkey 
+keytool -list -v | more
+keytool -genkey -keyalg RSA -alias androiddebugkey -dname "CN=lite, OU=dev, O=FssLe, L=NJ, S=JS, C=CN"
+keytool -list -alias androiddebugkey -keystore "debug.keystore" 
+ 
+map
+====
+"025aHjnrl520Td3m_FQKdcIBO2vaEwCmnfSk3aw"
+   
+ads
+====
+a14deccf77dab80
+
 ui
 ====
 Hierarchyviewer

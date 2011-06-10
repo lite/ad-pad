@@ -19,6 +19,12 @@
     <string name="twitter_label">Twitter</string>
     <string name="youtube_label">Youtube</string>
     <string name="foursquare_label">Foursquare</string>
-    
+       
+	  <string name="credits_pref_cat_title">Credits</string>
+    <string name="ads_pref_title">Show Ads</string>
+  	<string name="ads_pref_summary">Show/Hide Ads informations.</string>
+  	<string name="about_pref_title">About</string>
+  	<string name="about_pref_summary">More informations.</string>
+    <string name="about_version">Version %1$s (r%2$s)</string>  
     
 </resources>

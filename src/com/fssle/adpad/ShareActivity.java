@@ -3,29 +3,32 @@ package com.fssle.adpad;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;   
+import android.view.View;      
+import android.widget.TabHost; 
 
-import greendroid.app.GDTabActivity; 
+import greendroid.app.GDTabActivity;
 
-public class ShareActivity extends GDTabActivity {
+public class ShareActivity extends GDTabActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
+        super.onCreate(savedInstanceState);   
+		// setContentView (R.layout.web_view);
+		// setActionBarContentView(R.layout.web_view);
+        Intent i=new Intent(this, BrowserActivity.class);
+	   
+		TabHost host=getTabHost();
+		
 		final String shareText =  getString(R.string.share_label);
-		final Intent shareIntent = new Intent(this, OnlineActivity.class);
-        shareIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.flickr.com/photos/tags/blue/");
-        addTab(shareText, shareText, shareIntent);  
+		// i.putExtra(BrowserActivity.URL, "http://www.flickr.com/photos/tags/blue/"); 
+		i.putExtra(BrowserActivity.URL, "http://commonsware.com ");
+		// addTab(shareText, shareText, i);  
+        host.addTab(host.newTabSpec(shareText).setIndicator(shareText).setContent(i));
 
         final String uploadsText =  getString(R.string.uploads_label);
-        final Intent uploadsIntent = new Intent(this, OnlineActivity.class);
-        uploadsIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.flickr.com/photos/bigdani/");
-        addTab(uploadsText, uploadsText, uploadsIntent);
+        i.putExtra(BrowserActivity.URL, "http://www.android.com");
+        // addTab(uploadsText, uploadsText, i); 
+		host.addTab(host.newTabSpec(uploadsText).setIndicator(uploadsText).setContent(i));   
     }
-    
-    @Override
-    public int createLayout() {
-        return R.layout.share;
-    }
+
 }

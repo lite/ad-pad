@@ -3,7 +3,8 @@ package com.fssle.adpad;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
+import android.view.View;         
+import android.widget.TabHost;
                                   
 import greendroid.app.GDTabActivity; 
 
@@ -13,35 +14,34 @@ public class SocialActivity extends GDTabActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
+		Intent i=new Intent(this, BrowserActivity.class); 
+		  
+		TabHost host=getTabHost();
+		
 		final String feedText =  getString(R.string.feed_label);
-		final Intent feedIntent = new Intent(this, OnlineActivity.class);
-        feedIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.google.com");
-        addTab(feedText, feedText, feedIntent);  
+		i.putExtra(BrowserActivity.URL, "http://www.google.com");
+        // addTab(feedText, feedText, i); 
+		host.addTab(host.newTabSpec(feedText).setIndicator(feedText).setContent(i));
+ 
 
         final String facebookText =  getString(R.string.facebook_label);
-        final Intent facebookIntent = new Intent(this, OnlineActivity.class);
-        facebookIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.facebook.com");
-        addTab(facebookText, facebookText, facebookIntent);
+        i.putExtra(BrowserActivity.URL, "http://www.facebook.com");
+        // addTab(facebookText, facebookText, i);
+		host.addTab(host.newTabSpec(facebookText).setIndicator(facebookText).setContent(i));
 
         final String twitterText =  getString(R.string.twitter_label);
-        final Intent twitterIntent = new Intent(this, OnlineActivity.class);
-        twitterIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.twitter.com");
-        addTab(twitterText, twitterText, twitterIntent);
+        i.putExtra(BrowserActivity.URL, "http://www.twitter.com");
+        // addTab(twitterText, twitterText, i);
+		host.addTab(host.newTabSpec(twitterText).setIndicator(twitterText).setContent(i));
 
         final String youtubeText =  getString(R.string.youtube_label);
-        final Intent youtubeIntent = new Intent(this, OnlineActivity.class);
-        youtubeIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.youtube.com");
-        addTab(youtubeText, youtubeText, youtubeIntent);
+        i.putExtra(BrowserActivity.URL, "http://www.youtube.com");
+        // addTab(youtubeText, youtubeText, i);
+		host.addTab(host.newTabSpec(youtubeText).setIndicator(youtubeText).setContent(i));
 
         final String foursquareText =  getString(R.string.foursquare_label);
-        final Intent foursquareIntent = new Intent(this, OnlineActivity.class);
-        foursquareIntent.putExtra(OnlineActivity.EXTRA_CONTENT_URL, "http://www.foursquare.com");
-        addTab(foursquareText, foursquareText, foursquareIntent);
+        i.putExtra(BrowserActivity.URL, "http://www.foursquare.com");
+        // addTab(foursquareText, foursquareText, i);
+		host.addTab(host.newTabSpec(foursquareText).setIndicator(foursquareText).setContent(i));
     }
-    
-    @Override
-    public int createLayout() {
-        return R.layout.social;
-    } 
-
 }

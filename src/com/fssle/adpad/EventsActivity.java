@@ -2,7 +2,8 @@ package com.fssle.adpad;
                                       
 import android.os.Bundle;
 
-import greendroid.app.GDListActivity;
+import greendroid.app.GDListActivity; 
+// import greendroid.app.GDExpandableListActivity;
 import greendroid.widget.ItemAdapter; 
 
 public class EventsActivity extends GDListActivity
