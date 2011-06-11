@@ -19,11 +19,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
-import greendroid.app.GDListActivity;
-import greendroid.image.ChainImageProcessor;
-import greendroid.image.ImageProcessor;
-import greendroid.image.MaskImageProcessor;
-import greendroid.image.ScaleImageProcessor;
+import greendroid.app.GDListActivity;            
 import greendroid.widget.AsyncImageView;
 
 public class RidersActivity extends GDListActivity implements OnScrollListener {
@@ -49,54 +45,9 @@ public class RidersActivity extends GDListActivity implements OnScrollListener {
         }
 
         private LayoutInflater mInflater;
-        private ImageProcessor mImageProcessor;
-
+        
         public MyAdapter(Context context) {
             mInflater = LayoutInflater.from(context);
-            prepareImageProcessor(context);
-        }
-
-        private void prepareImageProcessor(Context context) {
-            
-            final int thumbnailSize = context.getResources().getDimensionPixelSize(R.dimen.thumbnail_size);
-            final int thumbnailRadius = context.getResources().getDimensionPixelSize(R.dimen.thumbnail_radius);
-
-            if (Math.random() >= 0.5f) {
-                //@formatter:off
-                mImageProcessor = new ChainImageProcessor(
-                        new ScaleImageProcessor(thumbnailSize, thumbnailSize, ScaleType.FIT_XY),
-                        new MaskImageProcessor(thumbnailRadius));
-                //@formatter:on
-            } else {
-                
-                Path path = new Path();
-                path.moveTo(thumbnailRadius, 0);
-                
-                path.lineTo(thumbnailSize - thumbnailRadius, 0);
-                path.lineTo(thumbnailSize, thumbnailRadius);
-                path.lineTo(thumbnailSize, thumbnailSize - thumbnailRadius);
-                path.lineTo(thumbnailSize - thumbnailRadius, thumbnailSize);
-                path.lineTo(thumbnailRadius, thumbnailSize);
-                path.lineTo(0, thumbnailSize - thumbnailRadius);
-                path.lineTo(0, thumbnailRadius);
-                
-                path.close();
-                
-                Bitmap mask = Bitmap.createBitmap(thumbnailSize, thumbnailSize, Config.ARGB_8888);
-                Canvas canvas = new Canvas(mask);
-                
-                Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-                paint.setStyle(Style.FILL_AND_STROKE);
-                paint.setColor(Color.RED);
-                
-                canvas.drawPath(path, paint);
-                
-                //@formatter:off
-                mImageProcessor = new ChainImageProcessor(
-                        new ScaleImageProcessor(thumbnailSize, thumbnailSize, ScaleType.FIT_XY),
-                        new MaskImageProcessor(mask));
-                //@formatter:on
-            }
         }
 
         public int getCount() {
@@ -119,7 +70,6 @@ public class RidersActivity extends GDListActivity implements OnScrollListener {
                 convertView = mInflater.inflate(R.layout.riders_view, parent, false); 
                 holder = new ViewHolder();
                 holder.imageView = (AsyncImageView) convertView.findViewById(R.id.async_image);
-                holder.imageView.setImageProcessor(mImageProcessor);
                 holder.textView = (TextView) convertView.findViewById(R.id.text);
                 convertView.setTag(holder);
             } else {
