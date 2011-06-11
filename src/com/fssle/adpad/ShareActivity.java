@@ -21,13 +21,14 @@ public class ShareActivity extends GDTabActivity{
 		
 		final String shareText =  getString(R.string.share_label);
 		// i.putExtra(BrowserActivity.URL, "http://www.flickr.com/photos/tags/blue/"); 
-		i.putExtra(BrowserActivity.URL, "http://commonsware.com ");
+		i.putExtra(BrowserActivity.URL, "http://www.google.com.hk/imgcat?hl=zh-CN&catid=564&sa=h");
 		// addTab(shareText, shareText, i);  
         host.addTab(host.newTabSpec(shareText).setIndicator(shareText).setContent(i));
 
         final String uploadsText =  getString(R.string.uploads_label);
-        i.putExtra(BrowserActivity.URL, "http://www.android.com");
-        // addTab(uploadsText, uploadsText, i); 
+        // i.putExtra(BrowserActivity.URL, "http://www.android.com");
+        i.putExtra(BrowserActivity.URL, "http://www.google.com.hk/imgcat?hl=zh-CN&catid=603&sa=h");
+		// addTab(uploadsText, uploadsText, i); 
 		host.addTab(host.newTabSpec(uploadsText).setIndicator(uploadsText).setContent(i));   
     }
 

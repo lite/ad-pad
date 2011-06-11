@@ -1,42 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/widget37"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:orientation="vertical"
-xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
 >
 
 <!-- ADs -->
-<include layout="@layout/ad_layout" />
-
-<LinearLayout android:id="@+id/widget39"
-  android:layout_width="317px"
-  android:layout_height="244px"
-  android:orientation="vertical">  
-      <com.google.android.maps.MapView 
-          android:id="@+id/map_view"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:apiKey="025aHjnrl520Td3m_FQKdcIBO2vaEwCmnfSk3aw"
-      />   
-  </LinearLayout>
-
-<!-- ADs -->
 <!-- <include layout="@layout/ad_layout" /> -->
-
-  <ScrollView
-    android:id="@+id/widget41"
-    android:layout_width="320px"
-    android:layout_height="65px"
-    >
-      <ListView
-        android:id="@+id/widget47"
-        android:layout_width="318px"
-        android:layout_height="63px"
-        />
-    </ScrollView>
-
-<!-- ADs -->
-<!-- <include layout="@layout/ad_layout" /> -->
-
+<com.google.ads.AdView android:id="@+id/ad_view"    
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  ads:adUnitId="a14deccf77dab80"
+  ads:adSize="BANNER"
+  ads:loadAdOnCreate="true" />
+ 
+<LinearLayout
+android:layout_width="320px"
+android:layout_height="254px"
+android:orientation="vertical"
+>
+<com.google.android.maps.MapView 
+  android:id="@+id/map_view"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:apiKey="025aHjnrl521frBloxRW7_Iwcrc_nixLiMj_Ktw"/>
+  
 </LinearLayout>
+   
+<ListView android:id="@+id/list_view"
+  android:layout_width="318px"
+  android:layout_height="63px"
+/>
+  
+</LinearLayout>
+

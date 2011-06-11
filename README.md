@@ -26,18 +26,23 @@ adb
                 
 adb logcat -c
 adb logcat -v time * 
-ad-p-ad
+
+adb uninstall com.fssle.adpad
+adb install bin/AdPad-release.apk
     
 key
 ==== 
-keytool -delete -alias androiddebugkey 
+keytool -delete -alias mykeystore 
 keytool -list -v | more
-keytool -genkey -keyalg RSA -alias androiddebugkey -dname "CN=lite, OU=dev, O=FssLe, L=NJ, S=JS, C=CN"
-keytool -list -alias androiddebugkey -keystore "debug.keystore" 
- 
+keytool -genkey -keyalg RSA -alias mykeystore -dname "CN=lite, OU=dev, O=FssLe, L=NJ, S=JS, C=CN" -keystore "my.keystore"
+keytool -list -alias mykeystore -keystore "my.keystore" 
+
+jarsigner -verbose -keystore mykeystore my_application.apk mykeystore
+jarsigner -verify my_signed.apk
+
 map
 ====
-"025aHjnrl520Td3m_FQKdcIBO2vaEwCmnfSk3aw"
+025aHjnrl521frBloxRW7_Iwcrc_nixLiMj_Ktw
    
 ads
 ====

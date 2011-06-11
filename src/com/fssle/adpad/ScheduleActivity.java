@@ -16,7 +16,7 @@ public class ScheduleActivity extends GDListActivity
 		
 		ItemAdapter adapter;
         try {
-            adapter = ItemAdapter.createFromXml(this, R.xml.news_items);
+            adapter = ItemAdapter.createFromXml(this, R.xml.schedule_items);
             setListAdapter(adapter);
         } catch (Exception e) {
             e.printStackTrace();
